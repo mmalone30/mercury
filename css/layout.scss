@@ -20,8 +20,22 @@ body{
   text-rendering: optimizeLegibility;
 }
 
+img {
+  max-width: 100%;
+}
+
 .main-header {
   padding:3em 0;
+
+  .profile-image {
+    background-image:url("../images/mitch.jpg");
+    background-size: cover;
+    background-blend-mode: multiply;
+    background-color:$blue;
+    height:7em;
+    width: 7em;
+    border-radius:50%;
+  }
   p.lead {
     font-size:3em;
     font-weight: 300;
