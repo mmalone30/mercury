@@ -1,0 +1,30 @@
+/*******************************************
+********************************************
+********************************************
+
+  Layout
+
+********************************************
+********************************************
+********************************************/
+
+body{
+  font-family: $mainFont;
+
+  font-size:$baseFontSize;
+  background: white;
+  color: $textColor;
+  margin: 0;
+  padding:0;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.main-header {
+  padding:3em 0;
+  p.lead {
+    font-size:3em;
+    font-weight: 300;
+    margin:3em 0;
+  }
+}
