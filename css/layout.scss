@@ -120,3 +120,11 @@ nav {
     }
   }
 }
+
+.main-footer {
+  background:$primaryColor;
+  padding:4em 0;
+  svg {
+    margin:1em 0;
+  }
+}
