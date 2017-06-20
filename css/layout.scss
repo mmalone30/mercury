@@ -27,6 +27,11 @@ img {
 .main-header {
   padding:3em 0;
 
+}
+
+.hero {
+  margin-top:7em;
+  margin-bottom:7em;
   .profile-image {
     background-image:url("../images/mitch.jpg");
     background-size: cover;
@@ -36,9 +41,82 @@ img {
     width: 7em;
     border-radius:50%;
   }
-  p.lead {
+  h2 {
     font-size:3em;
     font-weight: 300;
-    margin:3em 0;
+    margin:0 0 0.5em 0;
+  }
+  p {
+    font-size:2em;
+    line-height: 1.25;
+    font-weight: 300;
+    margin:0;
+  }
+}
+
+nav {
+  ul {
+    padding:0;
+    margin:0;
+    list-style: none;
+    display: flex;
+    li + li {
+      margin-left: 1.5em;
+
+    }
+    a {
+      color:$textColor;
+      font-weight: 300;
+      font-size:0.85em;
+      text-decoration: none;
+      text-transform: uppercase;
+      padding-bottom: 0.25em;
+    }
+    li.active {
+      a {
+        font-weight: 900;
+        box-shadow: 0 2px 0 $primaryColor;
+      }
+    }
+  }
+}
+
+.work {
+  background: $darkGray;
+  padding:7em 0;
+  color:white;
+  h3 {
+
+    margin-bottom: 2em;
+  }
+  .work-example {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    background:lighten($darkGray, 5%);
+    text-align: center;
+    color:white;
+    height: 15em;
+    margin-bottom: 1em;
+    transition:all ease-in-out 200ms;
+    &.poplibs {
+      &:hover {
+        transform: translateY(-0.25em);
+        background:$blue;
+      }
+    }
+    &.sharethrough {
+      &:hover {
+        transform:translateY(-0.25em);
+        background:$strGreen;
+      }
+    }
+    &.kareo {
+      &:hover {
+        transform:translateY(-0.25em);
+        background:$kareoOrange;
+      }
+    }
   }
 }

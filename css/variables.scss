@@ -8,11 +8,32 @@
 ********************************************
 ********************************************/
 
+@font-face {
+  font-family: 'Tiempos-Regular';
+  src: url('fonts/TiemposText-Regular.eot'); /* IE9 Compat Modes */
+  src: url('fonts/TiemposText-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('fonts/TiemposText-Regular.woff') format('woff'), /* Pretty Modern Browsers */
+       url('fonts/TiemposText-Regular.otf');
+
+}
+
+@font-face {
+  font-family: 'Tiempos-Bold';
+  src: url('fonts/TiemposText-Bold.eot'); /* IE9 Compat Modes */
+  src: url('fonts/TiemposText-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('fonts/TiemposText-Bold.woff') format('woff'), /* Pretty Modern Browsers */
+       url('fonts/TiemposText-Bold.otf');
+
+}
 
 // Fonts
 
-$sanSerif: "Lato", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial;
+$serifBold: "Tiempos-Bold", Georgia, serif;
+
+$sanSerif: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial;
 $mainFont: $sanSerif;
+
+$headingFont: $serifBold;
 
 $baseFontSize: 16px;
 
@@ -21,6 +42,12 @@ $baseFontSize: 16px;
 $blue:#02bffd;
 $purple:#6636AC;
 
-$darkGray: #22282f;
+$darkGray: #102844;
 
 $textColor:$darkGray;
+
+$primaryColor:$blue;
+
+$strGreen:#4AD0A5;
+
+$kareoOrange: #f7941d;
