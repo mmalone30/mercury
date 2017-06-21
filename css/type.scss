@@ -16,3 +16,38 @@
 h1, h2, h3, h4, h5 {
   font-family: $headingFont;
 }
+
+h3 {
+  font-size:1.5em;
+  line-height: 1;
+  margin-bottom: 1em;
+}
+
+p, span, strong, li, em {
+  font-size:1em;
+  font-weight: 300;
+  letter-spacing: -0.2px;
+  line-height: 1.75;
+
+}
+
+p + p {
+  margin-top:1.5em;
+}
+
+p + h3 {
+  margin-top:2em;
+}
+
+a {
+  color:$primaryColor;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+    text-decoration-skip: ink;
+  }
+  &:focus {
+    text-decoration: underline;
+    text-decoration-skip: ink;
+  }
+}

@@ -42,7 +42,7 @@ img {
     border-radius:50%;
   }
   h2 {
-    font-size:3em;
+    font-size:3.5em;
     font-weight: 300;
     margin:0 0 0.5em 0;
   }
@@ -51,6 +51,37 @@ img {
     line-height: 1.25;
     font-weight: 300;
     margin:0;
+  }
+}
+
+.main-content {
+  padding:7em 0;
+  h2 {
+    font-size:3em;
+    line-height: 1.333;
+  }
+  h2 + h3 {
+    font-family: $mainFont;
+    font-weight: 300;
+    font-size:1.5em;
+    line-height: 1.5;
+    margin-bottom: 2em;
+  }
+  ul.info {
+    list-style: none;
+    display:flex;
+
+    li + li {
+      margin-left: 2.5em;
+    }
+    li {
+      strong {
+        text-transform: uppercase;
+        font-weight: 400;
+        opacity: 0.5;
+        margin-right: 0.5em;
+      }
+    }
   }
 }
 
@@ -123,8 +154,19 @@ nav {
 
 .main-footer {
   background:$primaryColor;
-  padding:4em 0;
+  padding:7em 0;
   svg {
     margin:1em 0;
+  }
+}
+
+.cover {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 35em;
+  background-image:linear-gradient(-30deg,$primaryColor, $darkGray);
+  img {
+    max-width: 40em;
   }
 }

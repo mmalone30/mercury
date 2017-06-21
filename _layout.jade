@@ -18,7 +18,7 @@ html
           .col-auto.display-flex.justifyContent-end
             nav
               ul
-                li(class="#{ current.source == 'index' ? 'active' : '' }")
+                li(class="#{ current.source == 'index' || current.source == 'poplibs' ? 'active' : '' }")
                   a(href="/") Work
                 li(class="#{ current.source == 'about' ? 'active' : '' }")
                   a(href="/about") About
