@@ -2,10 +2,12 @@ doctype
 html
   head
     title Mitch Malone - digital product designer
+    link(rel='stylesheet', type='text/css', href='https://cloud.typography.com/6655932/659046/css/fonts.css')
+
     link(rel="stylesheet" href="css/main.css")
-    script(src='https://use.typekit.net/xgd1ivd.js')
-    script.
-      try{Typekit.load({ async: true });}catch(e){}
+    //script(src='https://use.typekit.net/xgd1ivd.js')
+    //script.
+      //try{Typekit.load({ async: true });}catch(e){}
   body
     .main-header
       .container
@@ -22,7 +24,7 @@ html
           .col-auto.display-flex.justifyContent-end
             nav
               ul
-                li(class="#{ current.source == 'index' || current.source == 'poplibs' ? 'active' : '' }")
+                li(class="#{ current.source == 'index' || current.source == 'poplibs' || current.source == 'patient-portal' ? 'active' : '' }")
                   a(href="/") Work
                 li(class="#{ current.source == 'about' ? 'active' : '' }")
                   a(href="/about") About
