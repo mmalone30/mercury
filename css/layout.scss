@@ -160,7 +160,7 @@ nav {
 }
 
 .main-footer {
-  background:$primaryColor;
+  background:$lightGray;
   padding:7em 0;
   svg {
     margin:1em 0;
@@ -168,13 +168,12 @@ nav {
 }
 
 .cover {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 35em;
-  background-image:linear-gradient(-30deg,$primaryColor, $darkGray);
-  img {
-    max-width: 40em;
+
+  padding:3em 0;
+
+  &.poplibs {
+    padding-bottom: 0;
+    background-image:linear-gradient(-30deg,$primaryColor, $darkGray);
   }
 }
 

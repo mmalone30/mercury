@@ -3,7 +3,7 @@
     .row
       .col-auto
         h2 Poplibs
-        h3 A side project I made to bring Madlibs to the internet.
+        h3 A simple Madlibs-style game for the internet.
         ul.info
           li 
             strong Industry
@@ -15,7 +15,8 @@
             strong URL 
             a(href="http://poplibs.co", target="_blank") poplibs.co
 .cover.poplibs
-  img(src="images/poplibs.png")
+  .container
+    img(src="images/poplibs.png")
 .main-content
   .container
     .row
@@ -36,15 +37,33 @@
           | I ended up listing all the stories in my HTML and showing/hiding them when the user clicks the "Read Story" button. All the stories use the same variables
           | and they all get reset when the user does another.
         p
-          | Ok so I a basic prototype working—now for the fun details. What was I going to name this thing? When I was testing out the functionality, I copied and pasted some short
+          | Ok so I had basic prototype working—now for the fun details. What was I going to name this thing? When I was testing out the functionality, I copied and pasted some short
           | movie descriptions to give me something to work with. Turns out, those brief movie descriptions were perfect fodder for Madlibs. So I had my product angle—Pop Culture + Madlibs = Poplibs.
+          
+        p
+          | The main visual design choice I made was to make it kid-friendly—bright colors, fun fonts, and lots of rounded corners. I tried to actually animate some elements so they would "pop" in but
+          | this proved really time consuming with not a huge payoff so I abandoned it.
 
     .row.figure
       .col-10
         .video-wrapper
-          video(controls='', autoplay='', loop='')
+          video(autoplay='', loop='')
             source(src='images/poplibs1.mp4', type='video/mp4')
             object(type='application/x-shockwave-flash', data='__FLASH__.SWF')
               img(src='poplibs1.png', width='640', height='360', alt='Poplibs', title='Poplibs')
       .col-2
         span.caption The welcome screen to Poplibs explains what they are before you get dropped into a story. I learned that some people aren't familiar with Madlibs, especially small kids.
+    .row.figure
+      .col-10
+        img(src='images/poplibs-story.png' alt='Poplibs', title='Poplibs')
+      .col-2
+        span.caption A completed Poplibs Story. Very minimal design with the option to do another or redo this story.
+    .row
+      .col-8.col-offset-1
+        h3 Outcome
+        p
+          | I hooked up Poplibs with 
+          a(href="http://heapanalytics.com", target="_blank") Heap Analytics 
+          |to track events and create funnels. The main success metric is completed stories. In the first couple weeks, I found that on average people play 6 Poplibs per session which far exceeded my expectations.
+        p
+          | I've also found through user testing that coming up with each word isn't super easy. Many people struggle with this and I find that it diminishes the fun factor. My next steps are to add some functionality to make it easy to try out words; hit a button to get a new word. Hopefully, I'll have an updated soon.
