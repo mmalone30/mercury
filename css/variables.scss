@@ -9,11 +9,11 @@
 ********************************************/
 
 @font-face {
-  font-family: 'Tiempos-Regular';
-  src: url('fonts/TiemposText-Regular.eot'); /* IE9 Compat Modes */
-  src: url('fonts/TiemposText-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('fonts/TiemposText-Regular.woff') format('woff'), /* Pretty Modern Browsers */
-       url('fonts/TiemposText-Regular.otf');
+  font-family: 'Tiempos-RegularItalic';
+  src: url('fonts/TiemposText-RegularItalic.eot'); /* IE9 Compat Modes */
+  src: url('fonts/TiemposText-RegularItalic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('fonts/TiemposText-RegularItalic.woff') format('woff'), /* Pretty Modern Browsers */
+       url('fonts/TiemposText-RegularItalic.otf');
 
 }
 
@@ -29,6 +29,8 @@
 // Fonts
 
 $serifBold: "Tiempos-Bold", Georgia, serif;
+
+$serifItalic: "Tiempos-RegularItalic", Georgia, serif;
 
 $sanSerif: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial;
 $mainFont: $sanSerif;

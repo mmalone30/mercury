@@ -33,4 +33,18 @@
         h3 Solution
         p
           | My biggest problem was figuring out how to render the Madlibs. I didn't want to create a database to store all the stories and templates. I wanted a simple way to show the right story with the right questions and let the user move on the next one.
-          | 
+          | I ended up listing all the stories in my HTML and showing/hiding them when the user clicks the "Read Story" button. All the stories use the same variables
+          | and they all get reset when the user does another.
+        p
+          | Ok so I a basic prototype working—now for the fun details. What was I going to name this thing? When I was testing out the functionality, I copied and pasted some short
+          | movie descriptions to give me something to work with. Turns out, those brief movie descriptions were perfect fodder for Madlibs. So I had my product angle—Pop Culture + Madlibs = Poplibs.
+
+    .row.figure
+      .col-10
+        .video-wrapper
+          video(controls='', autoplay='', loop='')
+            source(src='images/poplibs1.mp4', type='video/mp4')
+            object(type='application/x-shockwave-flash', data='__FLASH__.SWF')
+              img(src='poplibs1.png', width='640', height='360', alt='Poplibs', title='Poplibs')
+      .col-2
+        span.caption The welcome screen to Poplibs explains what they are before you get dropped into a story. I learned that some people aren't familiar with Madlibs, especially small kids.

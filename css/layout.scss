@@ -20,9 +20,10 @@ body{
   text-rendering: optimizeLegibility;
 }
 
-img {
+img, video {
   max-width: 100%;
 }
+
 
 .main-header {
   padding:3em 0;
@@ -102,6 +103,12 @@ nav {
       text-decoration: none;
       text-transform: uppercase;
       padding-bottom: 0.25em;
+      &:hover {
+        text-decoration: none;
+      }
+      &:focus {
+        text-decoration: none;
+      }
     }
     li.active {
       a {
@@ -169,4 +176,15 @@ nav {
   img {
     max-width: 40em;
   }
+}
+
+.figure {
+  margin-top:4em;
+  margin-bottom:4em;
+}
+
+.video-wrapper {
+  max-height: 441px;
+  overflow: hidden;
+  border-radius:3px;
 }
