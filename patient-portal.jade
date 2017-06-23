@@ -1,7 +1,7 @@
 .main-content
   .container
     .row
-      .col-auto
+      .col-8
         h2 Kareo Patient Portal
         h3 Easily understand and pay your medical bills, message your doctor, and see your medical records. 
         ul.info
@@ -27,3 +27,41 @@
         h3 The Problem 
         p Patient Portals are web products that are typically bundled with EHRs. They allow patients to access their health record and communicate with their providers. In the world of medicine, there are a lot of incentives provided by the federal government. One of those incentives is called Meaningful Use. If you can successfully attest Meaningful Use at your practice, through the HITECH Act, you can receive substantial cash bonuses. A patient portal is one of the requirements. But we didn't want to just satisfy a government checkbox. With the Patient Portal, we saw and opportunity to increase patient engagement and revenue volume for our customers.
         p One of our goals was to increase patient health awareness by making health information easy to get to and easy to understand. For practices, our goal was to increase patient responsiblity payments. In 2010, the US healthcare industry wrote off $65 billion in bad debt accrued from not collecting patient payments. For our customers, the problem lies in archaic payment practices, which we hoped to innovate with Patient Portal.
+        h3 Discovery
+        p We learned from interviews with patients and healthcare professionals that many patients don't care about statement details; they just want to know what they owe and how to pay it.
+      
+        p This was difficult for us to believe. How could patients not care about what they're paying for? We listened to the feedback and designed a payment solution that payment solution (using Stripe) that connected to the Patient Portal. But we also let patients make payments without logging in, authenticating, and viewing their statements. All they could see if what they owed and to whom. More on this later.
+    .row.figure
+      .col-10
+        img(src='images/early-portal-notes.jpg' alt='Patient Portal', title='Patient Portal Notes')
+      .col-2
+        span.caption Some early thinking about patient portals. I usually start by asking questions about needs, behaviors, and relationships.
+    .row
+      .col-8.col-offset-1
+        h3 Solution
+        p Kareo Patient Portal's feature set is determined by the type of Kareo customer. Certain functionality won't work if the customer doesn't have certain products enabled. For example, patient's can't make payments if the practice doesn't have Kareo Practice Management. We want to change this so practices can collect the money and work with an in-house biller or outsourced biller to adjudicate the amount. The value in signing up for the full Kareo suite is a lot of that work is done automatically. Below you can see the basic structure of how patients can interact with their practices with three typical scenarios.
+    .row.figure
+      .col-10
+        img(src='images/portal-structure2.png' alt='Patient Portal', title='Patient Portal Structure')
+      .col-2
+        span.caption Basic functionality for how patient portal connects to doctors, billers, front desk staff, and patients.
+    .row
+      .col-8.col-offset-1
+        p Since we learned that patient's mostly just want to make a payment, we made the payment process very simple. We designed the Patient Portal so a person can make a payment without logging in. Without authentication, patients can't view medical records or secure messages. But that's ok—the task is just to make a payment. 
+    .row.figure
+      .col-10
+        img(src='images/patient-portal-flow.png' alt='Patient Portal Sign In', title='Patient Portal Sign In Flow')
+      .col-2
+        span.caption Workflow for how a patient initially signs up for the Patient Portal. Notice how you can make a payment without actually logging in.
+    .row
+      .col-8.col-offset-1
+        p The part of this project that I am most proud of is the redesigned patient statement. If you're like me, you never understand the statements that you get in the mail from your healthcare provider. There is a form called an "EOB"—an Explanation of Benefits. Many people we interviewed believed this to be the bill they owe, despite many having a large "NOT A BILL" disclaimer. But for all intents and purposes, it's a bill. So we set out to make a simpler, more understandable bill.
+    .row.figure
+      .col-10
+        img(src="images/patient-statement.jpg")
+      .col-2
+        span.caption The new patient statement focused on clarity. We assumed that if the statement was clear, people would be more likely to make payments.
+    .row
+      .col-8.col-offset-1
+        p The new bill is a simple itemized list that shows exactly what happened at each visit, how much insurance paid, and much was written off, and what's left over.
+      

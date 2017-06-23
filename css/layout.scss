@@ -60,7 +60,7 @@ img, video {
   padding:7em 0;
   h2 {
     font-size:3em;
-    line-height: 1.333;
+    line-height: 1.5;
   }
   h2 + h3 {
     font-family: $mainFont;
@@ -172,7 +172,30 @@ nav {
 .cover {
 
   padding:5em 0;
+  &.about {
+    background-image:url("../images/cover-photo.jpg");
+    background-size:cover;
+    background-position: 0 50%;
+    position:relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
 
+    .scrim {
+      position:absolute;
+      top:0;
+      bottom:0;
+      left: 0;
+      right:0;
+      background-image:linear-gradient(45deg, $darkGray, $primaryColor);
+      opacity: 0.5;
+    }
+    img {
+      position: relative;
+      width:10em;
+    }
+  }
   &.poplibs {
     padding-bottom: 0;
     background:$primaryColor;
