@@ -37,3 +37,55 @@
       .col-8.col-offset-1
         h3 The Problem 
         p When I started with Sharethrough, it was difficult to answer specific questions with the old reporting interface. These pointed and actionable questions were left to be answered by Account Managers and engineers. This led to a lot of operational costs for the company. We needed to design a reporting system for answering basic and sophisticated questions.
+        h3 Discovery
+        p My discovery process always starts with interviews. For this project, I interviewed internal stakeholders like account managers and publisher customers. I wanted to understand the problem and what they were using to solve it. As I listened to these people, I found some patterns emerging. They usually wanted to understand performance of something across multiple dimensions. This led me to the formation of an effective mental model—levels and dimensions.
+        
+    .row.figure.bordered
+      .col-10
+        img(src='images/levels-and-dimensions.png' alt='Reporting Matrix', title='Reporting Matrix', class="padding-2")
+      .col-2
+        span.caption SFP Reporting Matrix. This represents "levels and dimensions"—the mental model for our reporting design.
+    .row
+      .col-8.col-offset-1
+        p Publishers ask questions about their ad units and revenue when it at a certain level (publisher, website, placement) and through a certain lens (by source, by device). If you put those two concepts (levels and dimensions) into a matrix, you find that the questions fit nicely into each cell. And you can see patterns about what type of question is going to be asked. Some questions are strictly operational (e.g., is the technology working?) and some are more strategic in nature. Some are about what kinds of campaigns a publisher should sell and where. We want to be software that can answer all these questions and with this approach, we think we can.
+        h3 Solution
+        p With a strong understanding of our users' needs and problems, we were able to prototype solutions.
+    .row.figure.bordered
+      .col-10
+        .row.marginBottom-4
+          .col-6
+            img(src="images/programmatic-placement.png")
+          .col-6
+            img(src="images/microscope-placement.png")
+        .row
+          .col-6
+            img(src="images/mediation-wireframe.png")
+          .col-6
+            img(src="images/bid-distribution.png")
+      .col-2
+        span.caption Some wireframes that were part of a low-fidelity Invision prototype. Each report you see here maps back to a cell in the Reporting Matrix.
+    .row.figure.bordered
+      .col-10
+        img(src="images/sharethrough.png")
+      .col-2
+        span.caption When you first enter the product, you get high-level performance metrics. This level is gives you a sense of the health of your overall native monetization. The "dimensions" you can see at this level are Channels (the sales methods) and Placements (your individual ad units).
+    .row.figure.bordered
+      .col-10
+        img(src="images/programmatic.jpg")
+      .col-2
+        span.caption From the dashboard, we can go "down" a level into Programmatic—a channel that operates on a real-time auction.
+    .row.figure.bordered
+      .col-10
+        img(src="images/intel.jpg")
+      .col-2
+        span.caption From the Programmatic report, we can go down another "level" and look at a specific brand that is buying through that channel.
+    .row.figure.bordered
+      .col-10
+        img(src="images/creative.jpg")
+      .col-2
+        span.caption This framework works in any type of report. Here, we're look at an ad sold directly by the publisher.
+    .row
+      .col-8.col-offset-1
+        h3 Outcome
+        p With this new reporting framework, we can speed up development and rapidly test out new ideas for reports. We've also vastly reduced the number of support tickets for mundane reporting questions. Users will log in and be able to answer most questions they have about their native monetization.
+        p We frequently survey our customers on a variety of topics but one thing we consistently hear is that our reporting is the best among all the other partner platforms that they use. It is very easy to use and extremely robust. Personally, this is what I love hearing the most.

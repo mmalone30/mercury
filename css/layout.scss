@@ -136,7 +136,7 @@ nav {
     text-align: center;
     color:white;
     height: 15em;
-    margin-bottom: 1em;
+    margin-bottom: 2em;
     transition:all ease-in-out 200ms;
     &.poplibs {
       &:hover {
@@ -217,6 +217,11 @@ nav {
 .figure {
   margin-top:4em;
   margin-bottom:4em;
+  &.bordered {
+    img {
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    }
+  }
 }
 
 .video-wrapper {
