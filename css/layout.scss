@@ -147,7 +147,7 @@ nav {
     &.sharethrough {
       &:hover {
         transform:translateY(-0.25em);
-        background:$strGreen;
+        background:$strPurple;
       }
     }
     &.kareo {
@@ -207,7 +207,7 @@ nav {
   }
   &.sharethrough {
 
-    background:$strGreen;
+    background:$strPurple;
     img {
       box-shadow: 0 12px 40px rgba(0,0,0,0.2);
     }
