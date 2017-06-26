@@ -38,7 +38,7 @@ img, video {
     background-image:url("../images/mitch.jpg");
     background-size: cover;
     background-blend-mode: multiply;
-    background-color:$blue;
+    background-color:lighten($blue, 30%);
     height:10em;
     width: 10em;
     border-radius:50%;
