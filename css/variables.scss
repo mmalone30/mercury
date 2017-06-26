@@ -26,11 +26,33 @@
 
 }
 
+@font-face {
+	font-family: 'QuincyCF-Black';
+	src: url('fonts/quincy-cf-black.eot');
+	src: url('fonts/quincy-cf-black.eot?#iefix') format('embedded-opentype'),
+             url('fonts/quincy-cf-black.woff2') format('woff2'),
+	     url('fonts/quincy-cf-black.woff') format('woff'),
+	     url('fonts/quincy-cf-black.ttf') format('truetype'),
+	     url('fonts/quincy-cf-black.svg#youworkforthem') format('svg');
+}
+
+@font-face {
+	font-family: 'QuincyCF-Italic';
+	src: url('fonts/quincy-cf-italic.eot');
+	src: url('fonts/quincy-cf-italic.eot?#iefix') format('embedded-opentype'),
+             url('fonts/quincy-cf-italic.woff2') format('woff2'),
+	     url('fonts/quincy-cf-italic.woff') format('woff'),
+	     url('fonts/quincy-cf-italic.ttf') format('truetype'),
+	     url('fonts/quincy-cf-italic.svg#youworkforthem') format('svg');
+
+}
+
+
 // Fonts
 
-$serifBold: "Tiempos-Bold", Georgia, serif;
+$serifBold: "QuincyCF-Black", Georgia, serif;
 
-$serifItalic: "Tiempos-RegularItalic", Georgia, serif;
+$serifItalic: "QuincyCF-Italic", Georgia, serif;
 
 $sanSerif: "Gotham SSm A", "Gotham SSm B", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial;
 $mainFont: $sanSerif;

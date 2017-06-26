@@ -45,7 +45,7 @@ img, video {
   }
   h2 {
     font-size:5em;
-    line-height: 1.2;
+    line-height: 1;
     margin:0 0 0.25em 0;
   }
   p {
@@ -57,7 +57,8 @@ img, video {
   padding:7em 0;
   h2 {
     font-size:3em;
-    line-height: 1.5;
+    line-height: 1;
+    margin-bottom: $baseFontSize;
   }
   h2 + h3 {
     font-family: $mainFont;
@@ -200,6 +201,13 @@ nav {
   &.kareo {
 
     background:$kareoOrange;
+    img {
+      box-shadow: 0 12px 40px rgba(0,0,0,0.2);
+    }
+  }
+  &.sharethrough {
+
+    background:$strGreen;
     img {
       box-shadow: 0 12px 40px rgba(0,0,0,0.2);
     }
