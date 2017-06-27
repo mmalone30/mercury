@@ -5,9 +5,12 @@ html
     link(rel='stylesheet', type='text/css', href='https://cloud.typography.com/6655932/659046/css/fonts.css')
 
     link(rel="stylesheet" href="css/main.css")
-    //script(src='https://use.typekit.net/xgd1ivd.js')
-    //script.
-      //try{Typekit.load({ async: true });}catch(e){}
+    link(rel='apple-touch-icon', sizes='180x180', href='images/favicon/apple-touch-icon.png')
+    link(rel='icon', type='image/png', sizes='32x32', href='images/favicon/favicon-32x32.png')
+    link(rel='icon', type='image/png', sizes='16x16', href='images/favicon/favicon-16x16.png')
+    link(rel='manifest', href='images/favicon/manifest.json')
+    link(rel='mask-icon', href='images/favicon/safari-pinned-tab.svg', color='#5bbad5')
+    meta(name='theme-color', content='#ffffff')
   body
     .main-header
       .container
@@ -24,7 +27,7 @@ html
           .col-auto.display-flex.justifyContent-end
             nav
               ul
-                li(class="#{ current.source == 'index' || current.source == 'poplibs' || current.source == 'patient-portal' || current.source == 'reporting' ? 'active' : '' }")
+                li(class="#{ current.source == 'index' || current.source == 'poplibs' || current.source == 'patient-portal' || current.source == 'reporting' || current.source == 'unified-auction' ? 'active' : '' }")
                   a(href="/") Work
                 li(class="#{ current.source == 'about' ? 'active' : '' }")
                   a(href="/about") About

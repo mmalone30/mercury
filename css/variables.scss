@@ -54,10 +54,12 @@ $serifBold: "QuincyCF-Black", Georgia, serif;
 
 $serifItalic: "QuincyCF-Italic", Georgia, serif;
 
+$serif: "Sentinel SSm A", "Sentinel SSm B", Georgia, serif;
+
 $sanSerif: "Gotham SSm A", "Gotham SSm B", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial;
 $mainFont: $sanSerif;
 
-$headingFont: $serifBold;
+$headingFont: $serif;
 
 $baseFontSize: 16px;
 

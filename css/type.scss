@@ -34,9 +34,10 @@ p, span, strong, li, em {
 blockquote {
   font-size:2em;
   line-height: 1;
-  font-family: $serifItalic;
+  font-family: $serif;
+  font-style:italic;
   margin:1em 0;
-  padding:1em 0;
+  padding:0.5em 0;
   position: relative;
   p {
     line-height: 1.25;
@@ -46,28 +47,29 @@ blockquote {
     font-size:$baseFontSize;
     font-style:normal;
   }
-  &:after, &:before {
-    content:"";
-    position: absolute;
-    display: block;
-    height:2px;
-    width:1em;
-    background:$primaryColor;
-  }
-  &:after {
-    bottom:0em;
-  }
-  &:before {
-    top:0em;
-  }
+
 }
 
 p + p {
   margin-top:1.5em;
 }
 
+p + ul {
+  margin-top:1.5em;
+}
+
 p + h3 {
   margin-top:2em;
+}
+
+ul {
+
+  li {
+    margin-left:$baseFontSize*1.25;
+  }
+  li + li {
+    margin-top:1em;
+  }
 }
 
 ul.unstyled {
@@ -105,7 +107,8 @@ a {
 }
 
 .caption {
-  font-family: $serifItalic;
-  font-size:1em;
-  line-height: 1.25;
+  font-family: $serif;
+  font-style: italic;
+  font-size:ceil($baseFontSize*0.8);
+  line-height: 1;
 }

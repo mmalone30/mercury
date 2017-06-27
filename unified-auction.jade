@@ -43,8 +43,32 @@
       .col-10
         img(src="images/old-auctions.png")
       .col-2
-        span.caption This is how a typical RTB impression works. Notice how the winning price is a lot less than the highest bid. This is the second price auction at work.
+        span.caption This is how a typical RTB impression works with Sharethrough. Notice how the winning price is a lot less than the highest bid. This is the second price auction at work.
     .row
       .col-8.col-offset-1
         h3 Discovery
-        p So given these problems, how can we reduce price reduction and have more exchanges compete to raise prices? Our approach: header bidding.
+        p So given these problems, how can we reduce price reduction and have more exchanges compete to raise prices? Our approach: header bidding. Header bidding allows publishers to connect several exchanges to bid at the same time before the page has fully loaded. 
+        p My team started this project by interviewing dozens of publishers about header bidding and how they were integrating technology to enable it. Through these interviews, we learned that the biggest pain points with head bidder were:
+        ul
+          li Ad server setup. Most header bidding services require a lot of laborious setup.
+          li Technical bidder management. To add or remove bidders requires pubs manually write special javascript code on each page. Most ad ops teams aren't equipped to do this.
+          li Poor Reporting. Most header bidding solutions do not offer meaning reporting, specifically visibility into bidder performance.
+    .row.figure.bordered
+      .col-10
+        img(src="images/wrapper-questions.png", class="padding-2")
+      .col-2
+        span.caption Our Header Bidding questions and assumptions were tracked in this Dropbox Paper doc. As we interviewed users, prototyped things, and user tested designs, we'd add to this doc.
+    .row
+      .col-8.col-offset-1
+        h3 Solution
+        p Header bidding changed a lot about how we think about inventory and how we report on it. An impression in this new world was a bit more nuanced. So in order to understand this world better, I needed to model it.
+    .row.figure.bordered
+      .col-10
+        img(src="images/new-auctions.png")
+      .col-2
+        span.caption Here we can see three separate exchanges (the teal, blue, and green bands) are able to bid at the same time. There's still price reduction, but we can see that it's not as dramatic as the auction above.
+    .row.figure.bordered
+      .col-10
+        img(src="images/scopes-of-reporting.jpg")
+      .col-2
+        span.caption This diagram is modeling the "scopes of reporting". We want to report on the auction as a whole (which we code named Microscope) and with the Sharethrough Exchange (STX) as a bidder. This diagram helped us understand how to structure our reporting.
