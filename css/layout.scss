@@ -78,7 +78,7 @@ img, video {
       strong {
         text-transform: uppercase;
         font-weight: 400;
-        opacity: 0.5;
+        color:desaturate(lighten($textColor, 55%), 50%);
         margin-right: 0.5em;
       }
     }

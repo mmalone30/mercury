@@ -1,0 +1,50 @@
+.main-content
+  .container
+    .row
+      .col-auto
+        h2 Sharethrough Unified Auction
+        h3 Reimagining Sharethrough's main revenue-driving product to compete with industry giants. 
+        ul.info
+          li 
+            strong Industry
+            span Advertising
+          li
+            strong Role
+            span Lead Designer
+          li
+            strong URL 
+            a(href="http://sharethrough.com", target="_blank") sharethrough.com
+.cover.sharethrough
+  .container
+    img(src="images/unified-auction.png")
+.main-content
+  .container
+    .row
+      .col-8.col-offset-1
+        h3 Background
+        p 
+          | One of the most popular advertising channels is called programmatic. With this method, publishers can connect their inventory to hundreds of advertisers who bid in real-time (using the 
+          a(href="https://www.iab.com/guidelines/real-time-bidding-rtb-project/", "_target") RTB protocol
+          |). Sharethrough's exchange offers this kind of real-time bidding for our publishers and it's the basis for our business. We take a share of the revenue that publishers make from this exchange.
+        h3 The Problem
+        p 
+          | Despite the efficiencies promised by programmatic and real-time bidding, standard open auctions leave a lot of money on the table.
+          
+        blockquote 
+          p Programmatic advertising seeks to make digital advertising more efficient by leveraging real-time data in order to reach consumers with the most relevant message at the best time. 
+          cite 
+            a(href="https://katana.media/blog/programmatic-buying-101-value-cost-efficiencies/", target="_blank") Programmatic Buying 101: The Cost Efficiencies
+        p 
+          | This is true for advertisers; not so much for publishers. In many programmatic channels, publishers' inventory is suffers from 
+          a(href="http://www.bannerconnect.net/first-price-second-price-auction-mechanics/", target="_blank") price reduction
+          |  and waterfalls can prevent the advertiser willing to pay the most for the impression to lose out to a lower bid.
+        p The other limitation with this style of programmatic selling is that you lose opportunities to monetize from other exchanges or networks. The way that publishers have to configure their ad units is using a "waterfall"—or a daisy-chained list of channels that can only compete when the previous channel has passed on the bid.
+    .row.figure.bordered
+      .col-10
+        img(src="images/old-auctions.png")
+      .col-2
+        span.caption This is how a typical RTB impression works. Notice how the winning price is a lot less than the highest bid. This is the second price auction at work.
+    .row
+      .col-8.col-offset-1
+        h3 Discovery
+        p So given these problems, how can we reduce price reduction and have more exchanges compete to raise prices? Our approach: header bidding.
