@@ -70,9 +70,12 @@ img, video {
   ul.info {
     list-style: none;
     display:flex;
-
+    li {
+      margin-left: 0;
+    }
     li + li {
       margin-left: 2.5em;
+      margin-top: 0;
     }
     li {
       strong {
@@ -80,6 +83,20 @@ img, video {
         font-weight: 400;
         color:desaturate(lighten($textColor, 55%), 50%);
         margin-right: 0.5em;
+      }
+    }
+    &.column {
+      flex-direction: column;
+      li + li {
+        margin-left: 0;
+        margin-top:2.5em;
+      }
+      li {
+        strong {
+          display: block;
+          margin-right:0;
+          margin-bottom:0.5em;
+        }
       }
     }
   }

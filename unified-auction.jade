@@ -47,12 +47,12 @@
     .row
       .col-8.col-offset-1
         h3 Discovery
-        p So given these problems, how can we reduce price reduction and have more exchanges compete to raise prices? Our approach: header bidding. Header bidding allows publishers to connect several exchanges to bid at the same time before the page has fully loaded. 
+        p So given these problems, how can we reduce price reduction and have more exchanges compete to raise prices? Our approach: a unified auction via header bidding. Header bidding allows publishers to connect several exchanges to bid at the same time before the page has fully loaded. 
         p My team started this project by interviewing dozens of publishers about header bidding and how they were integrating technology to enable it. Through these interviews, we learned that the biggest pain points with head bidder were:
         ul
-          li Ad server setup. Most header bidding services require a lot of laborious setup.
-          li Technical bidder management. To add or remove bidders requires pubs manually write special javascript code on each page. Most ad ops teams aren't equipped to do this.
-          li Poor Reporting. Most header bidding solutions do not offer meaning reporting, specifically visibility into bidder performance.
+          li Ad server setup. Most header bidding services require a lot of laborious setup in the ad server. How can we have software automate this rote task?
+          li Technical bidder management. To add or remove bidders requires pubs manually write special javascript code on each page. Most ad ops teams aren't equipped to do this. How can we provide an easy-to-use UI so publishers can manage bidders?
+          li Poor Reporting. Most header bidding solutions do not offer meaning reporting, specifically visibility into bidder performance. How can we tell a good story of header bidder performance?
     .row.figure.bordered
       .col-10
         img(src="images/wrapper-questions.png", class="padding-2")
@@ -72,3 +72,37 @@
         img(src="images/scopes-of-reporting.jpg")
       .col-2
         span.caption This diagram is modeling the "scopes of reporting". We want to report on the auction as a whole (which we code named Microscope) and with the Sharethrough Exchange (STX) as a bidder. This diagram helped us understand how to structure our reporting.
+    .row.figure.bordered
+      .col-10
+        img(src="images/product-architecture-future-sm.png", class="padding-2")
+      .col-2
+        span.caption If we were to deliver a unified auction, we would need to deliver unified reporting. A big problem we discovered is poor reporting with header bidding solutions. So I rearchitected the product around the placement—the atomic unit of a publisher's revenue. With this view, it's easy to get a holistic look at how you're making money.
+    .row.figure.bordered
+      .col-10
+        img(src="images/main-tasks.png", class="padding-2")
+      .col-2
+        span.caption Main tasks for our unified auction. With this feature set, we think we could bring to market a truly differentiated and awesome product.
+    .row.figure.bordered
+      .col-10
+        .row
+          .col-auto
+            img(src="images/ad-server-1.png")
+          .col-auto
+            img(src="images/ad-server-2.png")
+          .col-auto
+            img(src="images/ad-server-3.png")
+      .col-2
+        span.caption This was an early idea to make it easy to do all the ad server setup through Sharethrough. Setting up unified auctions and heading bidder carries high development costs. With our product, anyone can log in to Sharethrough and do it themselves.
+    .row.figure.bordered
+      .col-10
+        img(src="images/unified-placement.png")
+      .col-2
+        span.caption The final UI for the unified placement. Here you get a good sense of how exactly you're making money. Next steps are to add some data visualization for this view to make it easier to consume at a glance.
+    .row.figure.bordered
+      .col-10
+        img(src="images/edit-placement.png")
+      .col-2
+        span.caption This is the bread and butter of this project. In other unified auction solutions, bidder management requires an ad ops manager to file a ticket with an engineer and wait for the next sprint. Now, that same manager can log into SFP and manage bidders through our UI.
+    .row
+      .col-8.col-offset-1
+        h3 Outcome
