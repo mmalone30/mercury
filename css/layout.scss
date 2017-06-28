@@ -246,7 +246,9 @@ nav {
   img {
 
     &:hover {
-      cursor: pointer;
+      cursor: -webkit-zoom-in;
+      cursor: -moz-zoom-in;
+      cursor: zoom-in;
 
 
     }
