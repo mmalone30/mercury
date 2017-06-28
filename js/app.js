@@ -1,9 +1,11 @@
 $(document).ready(function(){
   $(".figure img").on("click", function(){
-    $(this).parent().addClass("lightbox");
-    $(this).before("<button class='close' onclick='closeLightbox()'>&times;</button>");
+    $(this).clone().appendTo( ".lightbox" );
+    $(".lightbox").addClass("up");
     $("body").addClass("stuck");
-
+    setTimeout(function(){
+      $(".lightbox").addClass("show");
+    },50);
   });
   // $(".close").on("click", function(){
   //   $(this).parent().removeClass("lightbox");
@@ -16,8 +18,19 @@ $(document).ready(function(){
 
 function closeLightbox() {
   var lightbox = $('.lightbox');
-  var closeButton = $('.close');
-  $('body').find(lightbox).removeClass("lightbox");
+
+  lightbox.addClass("leaving");
+
+  setTimeout(function(){
+    lightbox.removeClass("show leaving");
+
+  },250);
+
+  setTimeout(function(){
+    lightbox.removeClass("up");
+    lightbox.find("img").remove();
+  },500);
+
   $('body').removeClass("stuck");
-  $('body').find(closeButton).remove();
+
 }
