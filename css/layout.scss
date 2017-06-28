@@ -240,9 +240,15 @@ nav {
   &.bordered {
     img {
       box-shadow: 0 6px 20px rgba(0,0,0,0.1);
-      &:hover {
-        cursor: pointer;
-      }
+
+    }
+  }
+  img {
+    
+    &:hover {
+      cursor: pointer;
+
+
     }
   }
 }
@@ -269,6 +275,7 @@ nav {
   overflow: scroll;
   img {
     background: white;
+
   }
   .close {
     position: absolute;
