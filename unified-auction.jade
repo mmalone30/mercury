@@ -26,19 +26,27 @@
           | One of the most popular advertising channels is called programmatic. With this method, publishers can connect their inventory to hundreds of advertisers who bid in real-time (using the 
           a(href="https://www.iab.com/guidelines/real-time-bidding-rtb-project/", "_target") RTB protocol
           |). Sharethrough's exchange offers this kind of real-time bidding for our publishers and it's the basis for our business. We take a share of the revenue that publishers make from this exchange.
+        p Within this real-time bidding channel, you can create a "waterfall"—a daisy-chain of networks and exchanges to sell your inventory. This method has a lot of inefficiences because in order for a buyer to get a chance to bid on the impression, the previous buyer must pass on that impression. This means the buyer out there with the highest bid might not win. 
+        p 
+          | This is where 
+          a(href="https://digiday.com/media/wtf-header-bidding/", target="_blank") header bidding 
+          | comes into play. With this strategy, you connect multiple bidders and they all complete on the same impression before a webpage has loaded. This means the publisher has a better chance at getting the highest possible bid.
+        p Given certain market dynamics and customer development done in 2016, it seemed like a good idea for Sharethrough to redesign how it's RTB, open auction product worked. We wanted to deliver a unified auction with less waste for publishers.
         h3 The Problem
-        p 
-          | Despite the efficiencies promised by programmatic and real-time bidding, standard open auctions leave a lot of money on the table.
-          
-        blockquote 
-          p Programmatic advertising seeks to make digital advertising more efficient by leveraging real-time data in order to reach consumers with the most relevant message at the best time. 
-          cite 
-            a(href="https://katana.media/blog/programmatic-buying-101-value-cost-efficiencies/", target="_blank") Programmatic Buying 101: The Cost Efficiencies
-        p 
-          | This is true for advertisers; not so much for publishers. In many programmatic channels, publishers' inventory is suffers from 
-          a(href="http://www.bannerconnect.net/first-price-second-price-auction-mechanics/", target="_blank") price reduction
-          |  and waterfalls can prevent the advertiser willing to pay the most for the impression to lose out to a lower bid.
-        p The other limitation with this style of programmatic selling is that you lose opportunities to monetize from other exchanges or networks. The way that publishers have to configure their ad units is using a "waterfall"—or a daisy-chained list of channels that can only compete when the previous channel has passed on the bid.
+        p When it comes to unified auctions and header bidding, we identified these problems:
+        ol.fancy
+          li
+            strong Auction inefficiences.
+            | Waterfall configurations leave money on the table for publishers. Is there a way to get all the top bids upfront?
+          li 
+            strong Ad server setup. 
+            | Most header bidding services require a lot of laborious setup in the ad server. How can we have software automate this rote task?
+          li 
+            strong Technical bidder management. 
+            | To add or remove bidders requires pubs manually write special javascript code on each page. Most ad ops teams aren't equipped to do this. How can we provide an easy-to-use UI so publishers can manage bidders?
+          li 
+            strong Poor Reporting. 
+            | Most header bidding solutions do not offer meaning reporting, specifically visibility into bidder performance. How can we tell a good story of header bidder performance?
     .row.figure.bordered
       .col-10
         img(src="images/old-auctions.png")
@@ -49,10 +57,7 @@
         h3 Discovery
         p So given these problems, how can we reduce price reduction and have more exchanges compete to raise prices? Our approach: a unified auction via header bidding. Header bidding allows publishers to connect several exchanges to bid at the same time before the page has fully loaded. 
         p My team started this project by interviewing dozens of publishers about header bidding and how they were integrating technology to enable it. Through these interviews, we learned that the biggest pain points with head bidder were:
-        ul
-          li Ad server setup. Most header bidding services require a lot of laborious setup in the ad server. How can we have software automate this rote task?
-          li Technical bidder management. To add or remove bidders requires pubs manually write special javascript code on each page. Most ad ops teams aren't equipped to do this. How can we provide an easy-to-use UI so publishers can manage bidders?
-          li Poor Reporting. Most header bidding solutions do not offer meaning reporting, specifically visibility into bidder performance. How can we tell a good story of header bidder performance?
+        
     .row.figure.bordered
       .col-10
         img(src="images/wrapper-questions.png", class="padding-2")
@@ -111,5 +116,14 @@
     .row
       .col-8.col-offset-1
         h3 Outcome
+        p As of June 2017, our first unified auction product was released and getting some good traction. The best thing we hear from publishers is how easy the setup experience is compared to other header bidding/unified auction vendors.
+    .row.figure
+      .col-10
+        img(src="images/compare-code.png")
+      .col-2
+        span.caption On the left, sample on-page header bidding code for one vender. On the right, is Sharethrough's header bidding integration code. It's a lot less because we designed the product so a non-technical person can log into the Sharethrough platform and add/edit/remove stuff on their own.
+    .row.figure
+      .col-8.col-offset-1
+        p Publishers are spending less time performing rote management tasks in code and more time with more high-level strategic decisions that have big impact for their business. 
 .lightbox
   button(class='close' onclick='closeLightbox()') Close

@@ -31,6 +31,10 @@ p, span, strong, li, em {
 
 }
 
+strong {
+  font-weight: 400;
+}
+
 blockquote {
   font-size:2em;
   line-height: 1;
@@ -58,11 +62,15 @@ p + ul {
   margin-top:1.5em;
 }
 
+p + ol {
+  margin-top:1.5em;
+}
+
 p + h3 {
   margin-top:2em;
 }
 
-ul {
+ul, ol {
 
   li {
     margin-left:$baseFontSize*1.25;
@@ -70,6 +78,27 @@ ul {
   li + li {
     margin-top:1em;
   }
+}
+
+ol.fancy {
+  list-style-type: none;
+}
+
+ol.fancy li {
+  counter-increment: step-counter;
+  position: relative;
+
+}
+
+ol.fancy li + li {
+  margin-top: 2em;
+}
+
+ol.fancy li::before {
+  content: counter(step-counter);
+  font-family: $headingFont;
+  position: absolute;
+  left: -1.25em;
 }
 
 ul.unstyled {

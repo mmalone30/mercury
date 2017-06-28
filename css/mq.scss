@@ -37,6 +37,19 @@
 }
 
 @media screen and (max-width: 575px) {
+
+  body {
+    overflow: auto !important;
+  }
+
+  .figure img:hover {
+    cursor: default;
+  }
+
+  .lightbox {
+    display: none !important;
+  }
+
   [class^="col-"]{
     width: 100%;
     margin-left: 0;
