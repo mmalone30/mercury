@@ -1,0 +1,123 @@
+.main-content
+  .container
+    .row
+      .col-auto
+        h2 Sharethrough Platform Alerts
+        h3 Making it easier for publishers to improve their inventory by surfacing problems and opportunities.
+        ul.info
+          li 
+            strong Industry
+            span Advertising
+          li
+            strong Role
+            span Lead Designer
+          li
+            strong URL 
+            a(href="http://sharethrough.com", target="_blank") sharethrough.com
+.cover.sharethrough
+  .container
+    img(src="images/alerts_alerts-index.png")
+.main-content
+  .container
+    .row
+      .col-8.col-offset-1
+        h3 Problem
+        p 
+          | Sharethrough operates a two-sided marketplace—a place for advertisers to buy inventory and a place for publishers to put their inventory up for sale.
+          | If inventory doesn't perform well, advertisers will stop buying. If advertisers stop buying, publishers will leave.
+          | This means we need to control the quality of the ads and the inventory as best we can. As the business scales, this becomes very difficult. It's hard
+          | to manage inventory quality across hundreds and hundreds of sites and apps. 
+        p
+          | How might we make it easier for publishers to understand inventory quality and take action themselves? What if we scan the publisher's inventory and send them a note about problems and opportunities?
+        p Our objective for this feature was to see if we can build something that got publishers to resolve problems and take opportunities.
+    .row.figure
+      .col-10
+        img(src="images/alerts_problem-model.png").padding-2
+      .col-2
+        span.caption This model tries to visually explain the problem. When a user enters the platform, it's not clear there are problems or opportunities awaiting (the purple bubbles). How can we bring those things to the product surface?
+    .row
+      .col-8.col-offset-1
+        h3 The Solution
+        p We started experimenting with an "alerting" system. A communication system that matches inventory against a set of criteria and if true, it will create an in-platform alert and send an email to bring the publisher user in to fix it.
+        p We worked off the following assumptions:
+        ol.fancy
+          li Publisher users would be motivated to take an action to improve their inventory.
+          li Publisher users would be able to resolve the alerts they receive.
+          li The system wouldn't be too annoying to prevent people from using it.
+        p With those assumptions in mind, we set out to build something small and learn about these assumptions.
+    .row.figure
+      .col-10
+        img(src="images/alerts_concept-model.png").padding-2
+      .col-2
+        span.caption This is the concept model we based our first experiment on. In this model, the problems and opportunities are "sensed" by the platform and brought forward to the product surface to a place called the "Alert Index". These alerts also trigger an email which also brings the user to the Alert Index. The first experiment didn't have all of these features but it gave us something to work off of.
+    .row
+      .col-8.col-offset-1
+        p I began the project by working with product managers, engineers, and the solutions team to think through how the system should work. The solutions team—which works directly with publishers to troubleshoot problems—offered a lot of insight into the major problems that publishers face. With their help, we were able to come up with our first set of problems and opportunities to alert publishers. From these conversations, we also thought about the different "kinds" of alerts—scheduled and on-demand.
+        p During this time, I also worked closely with the lead engineers to think about how the system would actually work based on the concept model.
+    .row.figure
+      .col-10
+        img(src="images/alerts_scheduled-user-flow.png").padding-2
+      .col-2
+        span.caption This is the user flow for a "Scheduled" alert. These alerts run on a set interval (usually 1 week) and look for criteria in a publisher's inventory to be true. If it is, we send the alert. "Poor Video View Rates" are an example of a scheduled alert. The blue lines indicate the "user" flow through this system.
+    .row.figure
+      .col-10
+        img(src="images/alerts_on-demand-alert.png").padding-2
+      .col-2
+        span.caption This is the user flow for an "On-demand" alert. These alerts run when an "Alert Object" is created. An alert object might be a new floor price recommendation or a new demand partner coming online. When that happens, we want our publishers to know about so they can interact with those things.
+    .row
+      .col-8.col-offset-1
+        p With a strong understanding of what we wanted to accomplish and how the system would work, I started designing interfaces and prototyping ideas.
+    .row.figure.bordered
+      .col-5
+        img(src="images/alerts_idea-1.png")
+      .col-5
+        img(src="images/alerts_idea-2.png")
+      .col-2
+        span.caption An early concept around "Unread" and "Read" alerts. This added unnecessary complexity to the code so we scrapped it.
+    .row.figure.bordered
+      .col-5
+        img(src="images/alerts_idea-3.png")
+      .col-5
+        img(src="images/alerts_idea-4.png")
+      .col-2
+        span.caption A "tile" approach that included relevant actions for the alert category. Putting everything in a dropdown made the actions hard to discover.
+    .row.figure.bordered
+      .col-5
+        img(src="images/alerts_idea-5.png")
+      .col-5
+        img(src="images/alerts_idea-6.png")
+      .col-2
+        span.caption This approach deviated from the concept model and user flow dramatically. We wondered if the alerts were irrelevant to some users. So we'd let the user decide what to be alerted about. We scrapped this idea but kept it in mind as we experimented.
+    .row.figure.bordered
+      .col-10
+        img(src="images/alerts_email.png")
+      .col-2
+        span.caption The email that publisher users receive when they have an alert. This email is about poor Video View Rates (VVR), a key performance indicator for video ads. So far, we're finding that the email is a great channel for this feature. 
+    .row.figure.bordered
+      .col-10
+        img(src="images/alerts_alerts-index.png")
+      .col-2
+        span.caption This is the "Alerts Index"—if you click on the link in the email, you'll end up here. Here you can see what placements are affected by each alert category.
+    .row.figure.bordered
+      .col-10
+        img(src="images/alerts_dashboard.png")
+      .col-2
+        span.caption The Alert icon in the main navigation will show a purple indicator if you have alerts awaiting your inspection.
+    .row
+      .col-8.col-offset-1
+        h3 Outcome
+        p As of May 2017, we've run three experiments with this Alerting system. Each experiment builds upon the previous. We're finding that publishers are actively resolving the problems and opportunities when presented with an alert.
+    .row.figure
+      .col-10
+        img(src="images/alerts_resolved.png")
+      .col-2
+        span.caption This graph shows resolved Video View Rate alerts over time. In other words, publishers are receiving our alerts and taking action. The alerting system seems to be working.  
+    .row
+      .col-8.col-offset-1
+        p We applied Mixpanel tracking to our alerting system to track "alert resolutions." If the previous week generated an alert but didn't on the current week, we say that it is "resolved." We have to track it like this because you can't click a button in our platform to fix everything. Sometimes it requires you to go into our codebase and move stuff around. It's hard but publishers seem to be motivated. This alerting system gives them visibility into what's wrong and we show them how to fix it. 
+        p Our next steps (as of July 2017) is to provide some more management tools like unsubscribing. We're also experimenting with more performance alerts like click-through Rate. 
+    .row.marginTop-12
+      .col-auto.display-flex.justifyContent-end
+        a(href="poplibs.html", class="next-project") Next Project &rarr;
+.lightbox
+  button(class='close' onclick='closeLightbox()') Close
