@@ -43,31 +43,32 @@ img, video {
     background-size: cover;
     background-blend-mode: multiply;
     background-color:lighten($blue, 30%);
-    height:10em;
-    width: 10em;
+    height:8em;
+    width: 8em;
     border-radius:50%;
   }
   h2 {
-    font-size:5em;
-    line-height: 1;
+    font-size:3em;
+
     margin:0 0 0.25em 0;
   }
   p {
-
+    font-size:1.5em;
+    line-height: 1.35;
   }
 }
 
 .main-content {
   padding:7em 0;
   h2 {
-    font-size:3em;
+    font-size:2.25em;
     line-height: 1;
     margin-bottom: $baseFontSize;
   }
   h2 + h3 {
     font-family: $mainFont;
     font-weight: 300;
-    font-size:1.5em;
+    font-size:1.25em;
     line-height: 1.5;
     margin-bottom: 2em;
   }
