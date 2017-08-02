@@ -73,7 +73,6 @@ img, video {
     font-weight: 400;
     font-style: italic;
 
-    color:$accentColor;
 
   }
   h2 + h3 {
@@ -236,6 +235,7 @@ nav {
   padding:7em 0;
   color:white;
   p {
+    color:white;
     opacity: 0.5;
   }
   svg {
@@ -263,7 +263,9 @@ nav {
     height: 80vh;
     color:white;
     text-align: center;
-
+    p {
+      color:white;
+    }
     .scrim {
       position:absolute;
       top:0;

@@ -27,9 +27,9 @@ h3 {
 
 p, span, strong, li, em {
   font-size:1em;
-  font-weight: 400;
+  font-weight: 300;
   line-height: 1.75;
-
+  color:lighten(desaturate($textColor, 40%), 25%);
 }
 
 strong {
