@@ -32,6 +32,9 @@ $columns: 12;
   margin:0 auto;
   position:relative;
   z-index: 1;
+  &.full {
+    max-width: 100%;
+  }
 }
 
 .container:before,

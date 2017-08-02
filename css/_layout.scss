@@ -31,13 +31,17 @@ img, video {
 
 
 .main-header {
-  padding:3em 0;
+  padding:5em 0;
 
 }
 
 .hero {
-  margin-top:7em;
-  margin-bottom:7em;
+  height:50vh;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding:0 2em;
   .profile-image {
     background-image:url("../images/mitch.jpg");
     background-size: cover;
@@ -48,30 +52,43 @@ img, video {
     border-radius:50%;
   }
   h2 {
-    font-size:3em;
+    font-size:2em;
 
     margin:0 0 0.25em 0;
   }
   p {
-    font-size:1.5em;
-    line-height: 1.35;
+
   }
 }
 
 .main-content {
   padding:7em 0;
   h2 {
-    font-size:2.25em;
+    font-size:2em;
     line-height: 1;
     margin-bottom: $baseFontSize;
   }
+  h3 {
+    font-family: $headingFont;
+    font-weight: 400;
+    font-style: italic;
+
+    color:$accentColor;
+
+  }
   h2 + h3 {
     font-family: $mainFont;
-    font-weight: 300;
-    font-size:1.25em;
-    line-height: 1.5;
-    margin-bottom: 2em;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1em;
+    line-height: 1.75;
+    margin-bottom: 3em;
+    text-transform: none;
+    color:$textColor;
+
   }
+
+
   ul.info {
     list-style: none;
     display:flex;
@@ -141,29 +158,61 @@ nav {
 }
 
 .work {
-  background: $darkGray;
+  background: white;
   padding:7em 0;
-  color:white;
+
   h3 {
     font-family: $mainFont;
+    font-style: normal;
     text-transform: uppercase;
     margin-bottom: 2em;
   }
   .work-example {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     text-decoration: none;
-    background:lighten($darkGray, 5%);
+    background:$lightGray;
     text-align: center;
-    color:white;
-    height: 15em;
+    color:$textColor;
+    height: 60vh;
     margin-bottom: 2em;
+    padding:0 2em;
     transition:all ease-in-out 200ms;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-blend-mode: multiply;
+    span {
+      opacity: 0;
+      transform: translateY(2em);
+      transition:all ease-in-out 400ms;
+      max-width: 30em;
+      color:white;
+    }
+    h4 {
+      transform: translateY(2em);
+      margin-bottom: 1em;
+      transition:all ease-in-out 400ms;
+    }
+    &:hover {
+      h4 {
+        transform: translateY(0);
+        color:white;
+      }
+      span {
+        color:white;
+        opacity: 0.75;
+        transform: translateY(0);
+      }
+    }
     &.poplibs {
+
+
       &:hover {
         transform: translateY(-0.25em);
-        background:$blue;
+        background-color:$blue;
       }
     }
     &.sharethrough {
@@ -173,16 +222,17 @@ nav {
       }
     }
     &.kareo {
+
       &:hover {
         transform:translateY(-0.25em);
-        background:$kareoOrange;
+        background-color:$kareoOrange;
       }
     }
   }
 }
 
 .main-footer {
-  background:$lightGray;
+  background:darken($lightGray, 5%);
   padding:7em 0;
   svg {
     margin:1em 0;
@@ -195,12 +245,17 @@ nav {
   &.about {
     background-image:url("../images/cover-photo.jpg");
     background-size:cover;
-    background-position: 0 50%;
+    background-position: 0 70%;
+    background-color:lighten(desaturate($textColor, 30%), 30%);
+    background-blend-mode: multiply;
     position:relative;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 80vh;
+    color:white;
+    text-align: center;
 
     .scrim {
       position:absolute;
@@ -218,30 +273,30 @@ nav {
   }
   &.poplibs {
     padding-bottom: 0;
-    background:$primaryColor;
+    //background:$primaryColor;
   }
   &.kareo {
 
-    background:$kareoOrange;
+    //background:$kareoOrange;
     img {
-      box-shadow: 0 12px 40px rgba(0,0,0,0.2);
+      box-shadow: 0 12px 40px rgba(0,0,0,0.05);
     }
   }
   &.sharethrough {
 
-    background:$strPurple;
+    //background:$strPurple;
     img {
-      box-shadow: 0 12px 40px rgba(0,0,0,0.2);
+      box-shadow: 0 12px 40px rgba(0,0,0,0.05);
     }
   }
 }
 
 .figure {
-  margin-top:4em;
-  margin-bottom:4em;
+  margin-top:8em;
+  margin-bottom:8em;
   &.bordered {
     img {
-      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+      box-shadow: 0 6px 50px rgba(0,0,0,0.05);
 
     }
   }
