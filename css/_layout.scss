@@ -232,10 +232,17 @@ nav {
 }
 
 .main-footer {
-  background:darken($lightGray, 5%);
+  background:$textColor;
   padding:7em 0;
+  color:white;
+  p {
+    opacity: 0.5;
+  }
   svg {
     margin:1em 0;
+    path {
+      fill: white;
+    }
   }
 }
 
