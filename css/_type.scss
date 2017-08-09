@@ -15,8 +15,8 @@
 
 h1, h2, h3, h4, h5 {
   font-family: $headingFont;
-  font-style:italic;
-  font-weight: 800;
+
+  font-weight: 900;
 }
 
 h3 {
@@ -27,7 +27,7 @@ h3 {
 
 p, span, strong, li, em {
   font-size:1em;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.75;
   color:lighten(desaturate($textColor, 40%), 25%);
 }
@@ -141,7 +141,7 @@ a {
 }
 
 .caption {
-  font-family: $serif;
+  font-family: $mainFont;
   font-style: italic;
   font-size:ceil($baseFontSize*0.8);
   line-height: 1;
