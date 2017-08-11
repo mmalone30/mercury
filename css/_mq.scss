@@ -13,6 +13,17 @@
     font-size:3em;
   }
 
+  .work {
+    padding:5em 0;
+  }
+
+  .hero p {
+    text-align: center;
+  }
+  .shine-container {
+    display: none;
+  }
+
   .main-content {
     padding:4em 0;
     h2 {
@@ -93,6 +104,40 @@
   }
   .main-content {
     padding:3em 0;
+  }
+
+  .hero {
+    height:25vh;
+    h1 {
+      max-width: 100%;
+      font-size:2em;
+      text-align: left;
+    }
+    p {
+      text-align: left;
+    }
+    &.main-content {
+      padding:0 2em;
+      height:auto;
+      align-items: flex-start;
+    }
+  }
+
+  .work {
+    padding:4em 0;
+  }
+
+  .col-6 {
+    margin-bottom:2em;
+  }
+
+  .figure {
+    margin-top:5em;
+    margin-bottom:5em;
+  }
+
+  .work .work-example {
+    height:35vh;
   }
 
   .main-content ul.info {
