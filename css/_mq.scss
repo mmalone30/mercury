@@ -13,6 +13,10 @@
     font-size:3em;
   }
 
+  .main-header {
+    padding:3em 0;
+  }
+
   .work {
     padding:5em 0;
   }
@@ -35,11 +39,16 @@
     h2 + h3 {
       font-size:1em;
     }
+    &.hero {
+      padding:4em 2em;
+    }
   }
   .cover {
     padding:3em 0;
     &.about {
       height: 50vh;
+      padding-left: 2em;
+      padding-right: 2em;
     }
   }
   .main-content ul.info li strong{
@@ -64,6 +73,10 @@
   [class^="col-"]{
     width: 100%;
     margin-left: 0;
+  }
+
+  .col-5 + .col-5 {
+    margin-top:2em;
   }
 
   nav{
@@ -95,6 +108,7 @@
       margin-top:0.5em;
     }
   }
+
 }
 
 @media screen and (max-width: 465px) {
@@ -104,6 +118,14 @@
   }
   .main-content {
     padding:3em 0;
+  }
+
+  .main-content h2 {
+    text-align: left;
+  }
+
+  .main-content h2+h3 {
+    text-align: left;
   }
 
   .hero {
