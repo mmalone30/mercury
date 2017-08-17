@@ -70,10 +70,11 @@ img, video {
 .main-content {
   padding:7em 0;
   h2 {
-    font-size:2em;
+    font-size:1.5em;
     line-height: 1;
     margin-bottom: $baseFontSize;
     text-align: center;
+    font-weight: 600;
   }
   h3 {
     font-family: $headingFont;
@@ -86,7 +87,7 @@ img, video {
     font-style: normal;
     font-size: 1em;
     line-height: 1.75;
-    margin-bottom: 3em;
+    margin-bottom: 4em;
     text-transform: none;
     color:$textColor;
     text-align: center;
