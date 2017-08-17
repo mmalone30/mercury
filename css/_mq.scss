@@ -109,6 +109,19 @@
     }
   }
 
+  .work {
+    .work-example {
+      h4 {
+        transform: translateY(0);
+      }
+      span {
+        transform:translateY(0);
+        opacity: 1;
+        color:$textColor;
+      }
+    }
+  }
+
 }
 
 @media screen and (max-width: 465px) {
