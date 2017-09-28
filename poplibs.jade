@@ -14,7 +14,7 @@
       a(href="http://poplibs.co", target="_blank") poplibs.co
 .cover.poplibs
   .container
-    img(src="images/poplibs.png")
+    img(src="images/poplibs_screenshot.png")
 .main-content
   .container
     .row
@@ -41,17 +41,26 @@
         p
           | The main visual design choice I made was to make it kid-friendly&mdash;bright colors, fun fonts, and lots of rounded corners. I tried to actually animate some elements so they would "pop" in but
           | this proved really time consuming with not a huge payoff so I abandoned it.
-
+    .row.figure
+      .col-10
+        img(src='images/poplibs.png' alt="Poplibs", title="Poplibs")
+      .col-2
+        span.caption An old visual design showing off Poplibs responsiveness.
+    .row.figure
+      .col-10
+        img(src='images/poplibs_layouts.png' alt="Poplibs Layouts", title="Poplibs layouts")
+      .col-2
+        span.caption Some layout experiments. Trying to find a simple, fun design. 
     .row.figure
       .col-10
         .video-wrapper
-          video(autoplay='', loop='', poster="images/poplibs0.png")
-            source(src='images/poplibs1.mp4', type='video/mp4')
-            img(src='images/poplibs1.png', alt='Poplibs', title='Poplibs')
+          video(autoplay='', loop='', poster="images/poplibs_screenshot.png")
+            source(src='images/poplibs-video.mp4', type='video/mp4')
+            img(src='images/poplibs_screenshot.png', alt='Poplibs', title='Poplibs')
             
               
       .col-2
-        span.caption The welcome screen to Poplibs explains what they are before you get dropped into a story. I learned that some people aren't familiar with Madlibs, especially small kids.
+        span.caption Animation is something I'm always trying to get better at so I spent a lot of time working on the details of moving from Poplib to Poplib.
     .row.figure
       .col-10
         img(src='images/poplibs-story.png' alt='Poplibs', title='Poplibs')
